@@ -1,12 +1,13 @@
+
 export enum ThemeMode {
-    LIGHT = "LIGHT",
-    DARK = "DARK"
+    light = "light",
+    dark = "dark"
 }
 
+export type Theme = keyof typeof ThemeMode;
 export default interface IThemeContext {
-    mode: ThemeMode;
-    theme: object;
-    setMode: {
+    theme: Theme;
+    setTheme: {
         (): void
     }
 }
