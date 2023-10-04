@@ -3,17 +3,20 @@ import { TECHNOLOGIES, Icon } from '../../data/technologies'
 import { getAge } from '../../helpers/getAge'
 import { ThemeMode } from '../../types/IThemeContext'
 import { useTheme } from '../../contexts/Theme'
+import MagicFeather from '../../components/MagicFeather'
 
 export default function Home() {
 
    const { theme } = useTheme()
 
+
+
    return (
       <div className="main">
          <section className="head">
             <div className="description">
-               <h1 className="grand-title">Hey! I am Zineddine</h1>
-               <h2>a fullstack Web & Mobile developer</h2>
+               <h1 className="grand-title"><MagicFeather text='Hey! I am Zineddine' /></h1>
+               <h2><MagicFeather text='a fullstack Web & Mobile developer' startIn={1500} /></h2>
                <p className="caption">
 
                   I'm {getAge()} and I've been designing, developing and putting applications into production for companies for a few years now.
