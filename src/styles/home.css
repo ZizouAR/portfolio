@@ -1,0 +1,24 @@
+.main {
+    padding: 2rem;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 3;
+}
+
+.illustration {
+    background-image: url('../assets/illustrations/phone.png');
+    height: 600px;
+    width: 38%;
+    background-repeat: no-repeat;
+    background-size: auto 600px;
+    padding: 3%;
+}
