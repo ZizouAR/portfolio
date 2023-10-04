@@ -1,34 +1,29 @@
-import { createContext, useEffect, useState, useContext } from "react";
-import IThemeContext, { ThemeMode } from "../types/IThemeContext";
+import { createContext, useState, useContext, useEffect } from "react";
+import IThemeContext, { Theme, ThemeMode } from "../types/IThemeContext";
 import IProvider from "../types/IProvider";
-import LIGHT from "../themes/LIGHT";
-import DARK from "../themes/DARK";
 
 export const ThemeContext = createContext<IThemeContext>({
-    mode: ThemeMode.DARK,
-    theme: {},
-    setMode: () => { }
+    theme: ThemeMode.light,
+    setTheme: () => { }
 });
 
 export const useTheme = () => useContext(ThemeContext);
 
-export default function ThemeProvider({ children }: IProvider){
-    const [mode, set] = useState<ThemeMode>(ThemeMode.DARK);
-    const [theme, setTheme] = useState<object>(DARK);
+export default function ThemeProvider({ children }: IProvider) {
+    const [theme, set] = useState<Theme>(ThemeMode.dark);
 
     useEffect(() => {
-        setTheme(mode === ThemeMode.DARK ? LIGHT : DARK)
-    }, [mode])
+        document.body.setAttribute('data-theme', theme)
+    }, [theme])
 
-    const setMode = () => set(mode === ThemeMode.DARK ? ThemeMode.LIGHT : ThemeMode.DARK)
+    const setTheme = () => set(theme === ThemeMode.dark ? ThemeMode.light : ThemeMode.dark);
 
     return (
         <ThemeContext.Provider
-        value={{
-            mode,
-            theme,
-            setMode
-        }}
+            value={{
+                theme,
+                setTheme
+            }}
         >
             {children}
         </ThemeContext.Provider>
