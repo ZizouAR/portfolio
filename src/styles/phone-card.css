@@ -1,0 +1,6 @@
+.phone-card {
+    width: auto;
+    height: 2rem;
+    background-color: var(--accent);
+    border-radius: 100;
+}
