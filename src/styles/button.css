@@ -6,4 +6,9 @@
     border-radius: 10px;
     cursor: pointer;
     align-self: center;
+    
+}
+
+.button:hover{
+    background-color: var(--accent-hover);
 }
