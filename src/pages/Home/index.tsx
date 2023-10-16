@@ -16,7 +16,7 @@ export default function Home() {
          <section className="head">
             <div className="description">
                <h1 className="grand-title"><MagicFeather text='Hey! I am Zineddine' /></h1>
-               <h2><MagicFeather text='a fullstack Web & Mobile developer' startIn={1500} /></h2>
+               <h2 className="grand-subtitle"><MagicFeather text='a fullstack Web & Mobile developer' startIn={1500} /></h2>
                <p className="caption">
 
                   I'm {getAge()} and I've been designing, developing and putting applications into production for companies for a few years now.

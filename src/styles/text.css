@@ -9,10 +9,14 @@ p {
 }
 
 .grand-title {
-    font-size: 48px;
+    font-size: 68px;
+}
+
+.grand-subtitle {
+    font-size: 38px;
 }
 
 .caption {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 18px;
 }
