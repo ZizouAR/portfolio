@@ -1,13 +1,11 @@
 .section {
     width: 100%;
     min-height: 100vh;
-}
-
-.head {
     display: flex;
     justify-content: center;
     padding: 5rem;
 }
+
 
 .description {
     width: 70%;
