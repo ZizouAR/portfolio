@@ -33,3 +33,18 @@ body{
   position: relative;
 }
 
+/* CUSTOMIZED SCROLLBAR */
+::-webkit-scrollbar {
+  width: 1vh;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--accent); 
+  border-radius: 10px;
+  opacity: 0.1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+  opacity: 0.1;
+}
