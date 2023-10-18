@@ -20,3 +20,8 @@ p {
     color: var(--text-secondary);
     font-size: 18px;
 }
+
+.project-description {
+    text-align: justify;
+    text-justify: inter-word;
+}
