@@ -6,14 +6,17 @@
     padding: 5rem;
 }
 
-
 .description {
     width: 70%;
-    margin-top: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.container {
+    width: 70%;
+    margin-top: 2%;
 }
 
 .illustration {
@@ -30,11 +33,17 @@
 
 .technologies {
     display: flex;
-    justify-content: center;
     flex-direction: row;
     gap: 10px;
 }
 
 .icon:hover{
     opacity: 0.4;
+}
+
+.project-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 10% 0 10% 0;
 }
