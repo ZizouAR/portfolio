@@ -9,13 +9,13 @@ export default function ParticlesComponent() {
     const { theme } = useTheme()
 
     const particlesInit = useCallback(async (engine: Engine) => {
-        console.log(engine);
         await loadSlim(engine);
     }, []);
 
+    // @ts-ignore
     const particlesLoaded = useCallback(async (container: Container | undefined) => {
-        await console.log(container);
     }, []);
+    
     return (
         <Particles
             id="tsparticles"
