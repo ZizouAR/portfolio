@@ -1,9 +1,9 @@
-export type Icon = {
+export type IconType = {
     name: string,
     color: string
 }
 
-export const TECHNOLOGIES: Icon[] = [
+export const TECHNOLOGIES: IconType[] = [
     {
         name: 'html5',
         color: '#D36A39'
@@ -56,4 +56,4 @@ export const TECHNOLOGIES: Icon[] = [
         name: 'trello',
         color: '#3158C9'
     },
-] as Icon[]
+]

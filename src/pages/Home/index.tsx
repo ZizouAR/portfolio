@@ -1,16 +1,12 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { TECHNOLOGIES, Icon } from '../../data/technologies'
+import { TECHNOLOGIES, IconType } from '../../data/technologies'
 import { getAge } from '../../helpers/getAge'
-import { ThemeMode } from '../../types/IThemeContext'
-import { useTheme } from '../../contexts/Theme'
 import MagicFeather from '../../components/MagicFeather'
 import Button from '../../components/Button'
 import ProjectSection from '../../shared/ProjectSection'
 import IProject, { Projects } from '../../data/projects'
+import Icon from '../../components/Icon'
 
 export default function Home() {
-
-   const { theme } = useTheme()
 
    return (
       <div>
@@ -24,17 +20,7 @@ export default function Home() {
                   I also have experience in team and project management. I'm a fan of Typescript and JS frameworks, but not just that...
                </p>
                <div className='technologies' style={{ justifyContent: 'center' }}>
-                  {TECHNOLOGIES.map((icon: Icon, index) =>
-                     <FontAwesomeIcon
-                        //@ts-ignore
-                        icon={`fa-brands fa-${icon.name}`}
-                        className='icon'
-                        key={index}
-                        color={icon.color === '#1C1C1C'
-                           && theme === ThemeMode.dark
-                           ? '#FFFFFF'
-                           : icon.color} size='2x' />
-                  )}
+                  {TECHNOLOGIES.map((icon: IconType, index) => <Icon {...icon} key={index} />)}
                </div>
                <Button anchor='projects'>
                   Let's see more
