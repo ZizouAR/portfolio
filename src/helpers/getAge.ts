@@ -1,1 +1,0 @@
-export const getAge = () => new Date().getFullYear() - 1999
