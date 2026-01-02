@@ -1,10 +1,20 @@
-"use client"
+"use client";
 
+import HomeSection1 from "./partials/home/section-1";
+import HomeProjects from "./partials/home/projects";
 
 export default function Home() {
-  return (
-    <div className="bg-zinc-50 items-center font-sans dark:bg-black">
 
+  return (
+    <div className="min-h-screen relative overflow-hidden">
+
+
+
+      <main>
+        <HomeSection1 />
+        <HomeProjects />
+      </main>
     </div>
   );
 }
+
