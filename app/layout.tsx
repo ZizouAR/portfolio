@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { ThemeProvider } from "./providers/theme";
+import Navbar from "./layout/navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,12 +14,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+
+    <html lang="en" suppressHydrationWarning>
+      <body className="relative min-h-screen">
+        <ThemeProvider>
+          <div className="absolute inset-0 -z-10 bg-background">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(120,119,198,0.15),transparent)] dark:bg-[radial-gradient(circle_at_50%_-20%,rgba(120,119,198,0.2),transparent)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_100%,rgba(120,119,198,0.05),transparent)] dark:bg-[radial-gradient(circle_at_100%_100%,rgba(120,119,198,0.1),transparent)]" />
+          </div>
+
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
+
   );
 }
